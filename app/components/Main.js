@@ -20,6 +20,7 @@ class Main extends Component {
     constructor(props) {
         super(props);
         this.state = {free: false};
+        this.getStatus();
     }
 
     getStatus() {
@@ -35,7 +36,6 @@ class Main extends Component {
     }
 
     render() {
-        this.getStatus();
         return (
             <View style={styles.mainContainer}>
                 <Text style={styles.content}>Deepthi is </Text>

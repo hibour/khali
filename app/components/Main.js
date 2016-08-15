@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
 class Main extends Component {
     getStatus() {
         fetch("http://localhost:3000/api/user", {
-            method: "GET",
+            method: "POST",
             body: JSON.stringify({id: "kmdeepthi"})
         }).then((response) => response.json())
             .then((responseData) => {

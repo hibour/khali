@@ -1,12 +1,12 @@
 module.exports = [
     {
-        method: 'GET',
+        method: 'POST',
         path: '/',
         handler: function (request, reply) {
             reply('Hello, world!');
         }
     }, {
-        method: 'GET',
+        method: 'POST',
         path: '/api/user',
         handler: function (request, reply) {
             console.log("HELLLLOOOOOO");

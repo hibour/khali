@@ -23,7 +23,7 @@ class Main extends Component {
             body: JSON.stringify({id: "kmdeepthi"})
         }).then((response) => response.json())
             .then((responseData) => {
-                return JSON.stringify("something");
+                return responseData.free;
             })
             .done();
     }
@@ -32,7 +32,7 @@ class Main extends Component {
         return (
             <View style={styles.mainContainer}>
                 <Text style={styles.content}>Deepthi is </Text>
-                <Text style={styles.content}>{this.getStatus()}</Text>
+                <Text style={styles.content}>{this.getStatus() ? "Free" : "Busy"}</Text>
             </View>
         )
     }

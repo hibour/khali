@@ -1,0 +1,12 @@
+{
+  "users": {
+    "kmdeepthi": {
+      "free": true,
+      "friends": ["n", "a", "g"]
+    },
+    "n": {
+      "free": false,
+      "friends": ["kmdeepthi"]
+    }
+  }
+}

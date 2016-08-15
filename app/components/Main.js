@@ -35,6 +35,7 @@ class Main extends Component {
     }
 
     render() {
+        this.getStatus();
         return (
             <View style={styles.mainContainer}>
                 <Text style={styles.content}>Deepthi is </Text>

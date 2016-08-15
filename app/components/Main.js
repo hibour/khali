@@ -17,13 +17,19 @@ const styles = StyleSheet.create({
 });
 
 class Main extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {free: false};
+    }
+
     getStatus() {
         fetch("http://localhost:3000/api/user", {
             method: "POST",
             body: JSON.stringify({id: "kmdeepthi"})
         }).then((response) => response.json())
             .then((responseData) => {
-                return responseData.free;
+                console.log(responseData.free);
+                this.setState({free: responseData.free});
             })
             .done();
     }
@@ -32,7 +38,7 @@ class Main extends Component {
         return (
             <View style={styles.mainContainer}>
                 <Text style={styles.content}>Deepthi is </Text>
-                <Text style={styles.content}>{this.getStatus() ? "Free" : "Busy"}</Text>
+                <Text style={styles.content}>{this.state.free ? "Free" : "Busy"}</Text>
             </View>
         )
     }
